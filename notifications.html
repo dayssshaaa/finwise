@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уведомления - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title">Уведомления</h1>
+                <button class="icon-button notification-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content notifications-content">
+            <h2 class="section-header">Сегодня</h2>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Напоминание!</p>
+                    <p class="notification-text">Set up your automatic savings to meet your savings goal...</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Обновление</p>
+                    <p class="notification-text">Set up your automatic savings to meet your savings goal...</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+
+            <h2 class="section-header">Вчера</h2>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Операции</p>
+                    <p class="notification-text">A new transaction has been registered</p>
+                    <p class="notification-details">Groceries | Pantry | -$100,00</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Напоминание!</p>
+                    <p class="notification-text">Set up your automatic savings to meet your savings goal...</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+
+            <h2 class="section-header">На прошлой неделе</h2>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Отчет О Расходах</p>
+                    <p class="notification-text">We recommend that you be more attentive to your finances.</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                    </svg>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Операции</p>
+                    <p class="notification-text">A new transaction has been registered</p>
+                    <p class="notification-details">Food | Dinner | -$70,40</p>
+                    <p class="notification-time">17:00 - 24 Июня</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

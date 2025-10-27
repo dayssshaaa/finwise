@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Код Безопасности - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <div class="auth-wrapper">
+            <!-- Top section -->
+            <div class="top-section">
+                <h1 class="auth-title">Код Безопасности</h1>
+            </div>
+
+            <!-- Bottom section with form -->
+            <div class="bottom-section bottom-section-auth">
+                <p class="security-code-instruction">Введите Код Безопасности</p>
+
+                <!-- Security code input -->
+                <div class="security-code-container">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                </div>
+
+                <!-- Buttons -->
+                <button type="button" class="btn-primary btn-full" onclick="handleSecurityCode()">
+                    Далее
+                </button>
+
+                <button type="button" class="btn-secondary btn-full" onclick="goBack()">
+                    Назад
+                </button>
+
+                <!-- Social login -->
+                <p class="social-text">или войти через</p>
+                <div class="social-icons">
+                    <button type="button" class="social-icon facebook">
+                        <span class="icon-f">f</span>
+                    </button>
+                    <button type="button" class="social-icon google">
+                        <span class="icon-g">G</span>
+                    </button>
+                </div>
+
+                <!-- Sign up link -->
+                <p class="auth-link-text">
+                    Еще нет аккаунта? 
+                    <a href="register.html" class="auth-link">Зарегистрируйся</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

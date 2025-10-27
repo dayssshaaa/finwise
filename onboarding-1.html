@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро Пожаловать - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <div class="onboarding-wrapper">
+            <!-- Top section with title -->
+            <div class="top-section">
+                <h1 class="welcome-title">
+                    Добро Пожаловать<br>
+                    В Управление<br>
+                    Расходами
+                </h1>
+            </div>
+
+            <!-- Bottom section with content -->
+            <div class="bottom-section">
+                <div class="illustration-container">
+                    <div class="illustration-bg"></div>
+                    <div class="hand-illustration">
+                        <svg viewBox="0 0 200 200">
+                            <!-- Hand illustration placeholder -->
+                            <ellipse cx="100" cy="120" rx="30" ry="50" fill="#F5D6AB"/>
+                            <rect x="85" y="60" width="30" height="40" rx="5" fill="#4A90E2"/>
+                        </svg>
+                    </div>
+                    <div class="coins">
+                        <div class="coin coin-1"></div>
+                        <div class="coin coin-2"></div>
+                        <div class="coin coin-3"></div>
+                    </div>
+                </div>
+
+                <button class="btn-primary btn-onboarding" onclick="goToNextOnboarding()">
+                    Далее
+                </button>
+
+                <div class="pagination-dots">
+                    <div class="dot dot-active"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить Сбережение - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/savings.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title-dark">Add Savings</h1>
+                <button class="icon-button notification-btn-dark">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content">
+            <form class="add-expense-form" id="addSavingsForm">
+                <!-- Date Field -->
+                <div class="form-group">
+                    <label for="savingsDate">Date</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="savingsDate" class="form-input" value="November 15, 2024" required>
+                        <button type="button" class="input-icon calendar-icon" onclick="openDatePicker()">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Field -->
+                <div class="form-group">
+                    <label for="savingsCategory">Category</label>
+                    <div class="input-wrapper">
+                        <select id="savingsCategory" class="form-input form-select" required>
+                            <option value="">Select the category</option>
+                            <option value="travel">✈️ Путешествия</option>
+                            <option value="home">🏠 Дом</option>
+                            <option value="car">🚗 Машина</option>
+                            <option value="wedding" selected>💍 Свадьба</option>
+                        </select>
+                        <span class="input-icon chevron-icon">▼</span>
+                    </div>
+                </div>
+
+                <!-- Amount Field -->
+                <div class="form-group">
+                    <label for="savingsAmount">Amount</label>
+                    <input type="text" id="savingsAmount" class="form-input" value="$87.32" required>
+                </div>
+
+                <!-- Title Field -->
+                <div class="form-group">
+                    <label for="savingsTitle">Expense Title</label>
+                    <input type="text" id="savingsTitle" class="form-input" value="Wedding Deposit" required>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="savingsMessage" class="label-highlight">Enter Message</label>
+                    <textarea id="savingsMessage" class="form-input form-textarea" rows="4" placeholder="Добавьте заметку..."></textarea>
+                </div>
+
+                <!-- Save Button -->
+                <button type="submit" class="btn-primary btn-full btn-save-expense">
+                    Save
+                </button>
+            </form>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="savings.html" class="nav-item active">
+                <span class="nav-icon">💰</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/savings.js"></script>
+</body>
+</html>
+

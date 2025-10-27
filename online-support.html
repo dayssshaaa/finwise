@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Поддержка - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title">Онлайн-Поддержка</h1>
+                <button class="icon-button notification-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Tabs -->
+            <div class="support-tabs">
+                <button class="support-tab active">Тех. поддержка</button>
+                <button class="support-tab">Центр Помощи</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content support-content">
+            <div class="chat-list">
+                <h3 class="chat-section-title">Активные Чаты</h3>
+                
+                <div class="chat-card">
+                    <div class="chat-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-info">
+                        <p class="chat-title">Support Assistant</p>
+                        <p class="chat-message">Hello! I'm here to assist you</p>
+                    </div>
+                    <span class="chat-time">2 минуты назад</span>
+                </div>
+
+                <h3 class="chat-section-title">Завершенные Чаты</h3>
+
+                <div class="chat-card">
+                    <div class="chat-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-info">
+                        <p class="chat-title">Help Center</p>
+                        <p class="chat-message">Your account is ready to use...</p>
+                    </div>
+                    <span class="chat-time">11 Июня</span>
+                </div>
+
+                <div class="chat-card">
+                    <div class="chat-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-info">
+                        <p class="chat-title">Support Assistant</p>
+                        <p class="chat-message">Hello! I'm here to assist you</p>
+                    </div>
+                    <span class="chat-time">10 Июня</span>
+                </div>
+
+                <div class="chat-card">
+                    <div class="chat-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-info">
+                        <p class="chat-title">Support Assistant</p>
+                        <p class="chat-message">Hello! I'm here to assist you</p>
+                    </div>
+                    <span class="chat-time">9 Июня</span>
+                </div>
+
+                <div class="chat-card">
+                    <div class="chat-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                    </div>
+                    <div class="chat-info">
+                        <p class="chat-title">Help Center</p>
+                        <p class="chat-message">Hi, how are you today?</p>
+                    </div>
+                    <span class="chat-time">8 Июня</span>
+                </div>
+            </div>
+
+            <button class="btn-primary btn-full" onclick="window.location.href='chat.html'">
+                Начать Новый Чат
+            </button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <span class="nav-icon">👤</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
+

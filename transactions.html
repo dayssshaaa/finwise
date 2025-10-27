@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Операции - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section transactions-header">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goToDashboard()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title">Операции</h1>
+                <button class="icon-button notification-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Balance Card -->
+            <div class="balance-card">
+                <p class="balance-label-small">Баланс</p>
+                <p class="balance-amount-large">$7,783.00</p>
+            </div>
+
+            <!-- Balance Summary -->
+            <div class="balance-summary">
+                <div class="summary-item-inline">
+                    <p class="summary-label-inline">Баланс</p>
+                    <p class="summary-amount-inline">$7,783.00</p>
+                </div>
+                <div class="separator-inline"></div>
+                <div class="summary-item-inline">
+                    <p class="summary-label-inline">Убыток</p>
+                    <p class="summary-amount-inline loss-amount">-$1.187.40</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-bar-container">
+                    <div class="progress-bar-filled" style="width: 30%">
+                        <span class="progress-text">30%</span>
+                    </div>
+                    <span class="progress-target">$20,000.00</span>
+                </div>
+                <p class="progress-message">
+                    <span class="checkbox-icon">✓</span>
+                    30% От Ваших Расходов, Выглядит Неплохо.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content">
+            <h2 class="month-header">Июнь</h2>
+
+            <div class="transactions-list">
+                <div class="transaction-item full">
+                    <div class="transaction-icon income">💰</div>
+                    <div class="transaction-details">
+                        <p class="transaction-title">Зарплата</p>
+                        <p class="transaction-date">18:27 - 30 Июня</p>
+                    </div>
+                    <div class="transaction-category">Ежемесячно</div>
+                    <div class="transaction-separator"></div>
+                    <div class="transaction-amount">$4.000,00</div>
+                </div>
+
+                <div class="transaction-item full">
+                    <div class="transaction-icon expense">🛒</div>
+                    <div class="transaction-details">
+                        <p class="transaction-title">Бакалея</p>
+                        <p class="transaction-date">17:00 - 24 Июня</p>
+                    </div>
+                    <div class="transaction-category">Кладовая</div>
+                    <div class="transaction-separator"></div>
+                    <div class="transaction-amount expense">-$100,00</div>
+                </div>
+
+                <div class="transaction-item full">
+                    <div class="transaction-icon expense">🔑</div>
+                    <div class="transaction-details">
+                        <p class="transaction-title">Аренда</p>
+                        <p class="transaction-date">8:30 - 15 Июня</p>
+                    </div>
+                    <div class="transaction-category">Аренда</div>
+                    <div class="transaction-separator"></div>
+                    <div class="transaction-amount expense">-$674,40</div>
+                </div>
+
+                <div class="transaction-item full">
+                    <div class="transaction-icon expense">🚌</div>
+                    <div class="transaction-details">
+                        <p class="transaction-title">Транспорт</p>
+                        <p class="transaction-date">9:30 - 8 Июня</p>
+                    </div>
+                    <div class="transaction-category">Топливо</div>
+                    <div class="transaction-separator"></div>
+                    <div class="transaction-amount expense">-$4,13</div>
+                </div>
+            </div>
+
+            <h2 class="month-header">Май</h2>
+
+            <div class="transactions-list">
+                <div class="transaction-item full">
+                    <div class="transaction-icon expense">🍽️</div>
+                    <div class="transaction-details">
+                        <p class="transaction-title">Еда</p>
+                        <p class="transaction-date">19:30 - 31 Мая</p>
+                    </div>
+                    <div class="transaction-category">Ужин</div>
+                    <div class="transaction-separator"></div>
+                    <div class="transaction-amount expense">-$70,40</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item active">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

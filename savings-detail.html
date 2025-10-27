@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сбережение - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/savings.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title" id="savingsTitle">Goal</h1>
+                <button class="icon-button notification-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Balance and Losses -->
+            <div class="balance-losses">
+                <div class="balance-item">
+                    <span class="balance-icon">▲</span>
+                    <p class="balance-label">Баланс</p>
+                    <p class="balance-amount">$7,783.00</p>
+                </div>
+                <div class="separator"></div>
+                <div class="balance-item">
+                    <span class="balance-icon loss-icon">▼</span>
+                    <p class="balance-label">Убытки</p>
+                    <p class="balance-amount loss-amount">-$1,187.40</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-bar-container">
+                    <div class="progress-bar-filled" style="width: 30%">
+                        <span class="progress-text">30%</span>
+                    </div>
+                    <span class="progress-target">$20,000.00</span>
+                </div>
+                <p class="progress-message">
+                    <span class="checkbox-icon">✓</span>
+                    30% От Ваших Расходов, Выглядит Неплохо.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content">
+            <div class="savings-goal-overview">
+                <div class="goal-info">
+                    <div class="goal-item">
+                        <span class="goal-icon">📋</span>
+                        <div class="goal-content">
+                            <p class="goal-label">Goal</p>
+                            <p class="goal-amount" id="goalAmount">$1,962.93</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-item">
+                        <span class="goal-icon">💰</span>
+                        <div class="goal-content">
+                            <p class="goal-label">Amount Saved</p>
+                            <p class="goal-saved" id="amountSaved">$653.31</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="circular-progress-savings">
+                    <svg width="120" height="120">
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#E0E0E0" stroke-width="8"/>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#80B3FF" stroke-width="8" 
+                                stroke-dasharray="314" stroke-dashoffset="188" stroke-linecap="round"
+                                transform="rotate(-90 60 60)"/>
+                        <text x="60" y="60" text-anchor="middle" dy=".3em" font-size="14" id="savingsIcon">✈️</text>
+                    </svg>
+                    <p class="savings-goal-name" id="savingsGoalName">Travel</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="savings-progress-bar">
+                <div class="progress-text-left">40%</div>
+                <div class="progress-bar-savings">
+                    <div class="progress-fill-savings" id="progressFill" style="width: 40%"></div>
+                    <div class="progress-target-amount" id="progressTarget">$1,962.93</div>
+                </div>
+            </div>
+
+            <p class="progress-status">
+                <span class="checkbox-icon">✓</span>
+                <span id="progressStatus">30% Of Your Expenses, Looks Good.</span>
+            </p>
+
+            <!-- Transaction List -->
+            <div class="savings-transactions">
+                <h2 class="month-header-savings">
+                    <span id="currentMonthSavings">April</span>
+                    <button class="calendar-icon-btn" onclick="showCalendar()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                    </button>
+                </h2>
+
+                <div class="expenses-list" id="savingsList">
+                    <!-- Transactions will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Add Savings Button -->
+            <button class="btn-primary btn-full" onclick="window.location.href='add-savings.html'">
+                Add Savings
+            </button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="savings.html" class="nav-item active">
+                <span class="nav-icon">💰</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/savings.js"></script>
+</body>
+</html>
+

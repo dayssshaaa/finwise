@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать Профиль - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="top-section">
+            <div class="header-with-back">
+                <button class="icon-button back-btn" onclick="goBack()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <h1 class="page-title">Редактировать</h1>
+                <button class="icon-button notification-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25-2.5 7.5-2.5 7.5H2l2 4h6l2-4h-2.5S7 14.25 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 5.25-2.5 7.5-2.5 7.5H14l2 4h6l2-4h-2.5c0 0-2.5-2.25-2.5-7.5 0-3.87-3.13-7-7-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bottom-section dashboard-content edit-profile-content">
+            <!-- Profile Avatar -->
+            <div class="profile-avatar-section">
+                <div class="avatar-large">
+                    <span class="avatar-initial-large">Д</span>
+                </div>
+                <button class="camera-btn">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.39-.39-1.11-.39-1.5 0L16 5.5l2.5 2.5 2.21-2.21c.38-.38 1.04-.38 1.5.04zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <h3 class="profile-section-title">Данные Профиля</h3>
+
+            <form class="edit-profile-form" id="editProfileForm">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="editName">Имя</label>
+                    <input type="text" id="editName" class="form-input" value="Дарья" required>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                    <label for="editPhone">Номер Телефона</label>
+                    <input type="tel" id="editPhone" class="form-input" value="+375 (29) 777-77-77" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="editEmail">Электронная Почта</label>
+                    <input type="email" id="editEmail" class="form-input" value="example@example.com" required>
+                </div>
+
+                <!-- Notifications Toggle -->
+                <div class="form-group toggle-group">
+                    <label for="notificationsToggle">Уведомления</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="notificationsToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <!-- Update Button -->
+                <button type="submit" class="btn-primary btn-full">
+                    Обновить
+                </button>
+            </form>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+            </a>
+            <a href="analysis.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+            </a>
+            <a href="transactions.html" class="nav-item">
+                <span class="nav-icon">↔️</span>
+            </a>
+            <a href="categories.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <span class="nav-icon">👤</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
+

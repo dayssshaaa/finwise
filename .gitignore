@@ -1,0 +1,21 @@
+# Игнорировать временные файлы
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Игнорировать системные файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup файлы
+*.bak
+*~
+
+# Node modules (если будут добавлены)
+node_modules/
+package-lock.json
+

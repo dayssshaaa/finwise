@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - FinWise</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span class="status-time">16:04</span>
+            <div class="status-icons">
+                <span class="icon-signal"></span>
+                <span class="icon-wifi"></span>
+                <span class="icon-battery"></span>
+            </div>
+        </div>
+
+        <div class="auth-wrapper">
+            <!-- Top section -->
+            <div class="top-section">
+                <h1 class="auth-title">Создание Аккаунта</h1>
+            </div>
+
+            <!-- Bottom section with form -->
+            <div class="bottom-section bottom-section-auth">
+                <form class="auth-form" id="registerForm">
+                    <!-- Name field -->
+                    <div class="form-group">
+                        <label for="regName">Имя</label>
+                        <input type="text" id="regName" class="form-input" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="regEmail">Электронная Почта</label>
+                        <input type="email" id="regEmail" class="form-input" placeholder="example@example.com" required>
+                    </div>
+
+                    <!-- Phone field -->
+                    <div class="form-group">
+                        <label for="regPhone">Номер Телефона</label>
+                        <input type="tel" id="regPhone" class="form-input" placeholder="+ 375 (__) ____-____" required>
+                    </div>
+
+                    <!-- Date of birth field -->
+                    <div class="form-group">
+                        <label for="regBirthdate">Дата Рождения</label>
+                        <input type="date" id="regBirthdate" class="form-input" required pattern="\d{4}-\d{2}-\d{2}">
+                    </div>
+
+                    <!-- Password field -->
+                    <div class="form-group">
+                        <label for="regPassword">Пароль</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="regPassword" class="form-input" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('regPassword')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Repeat password field -->
+                    <div class="form-group">
+                        <label for="regPasswordRepeat">Повторите Пароль</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="regPasswordRepeat" class="form-input" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('regPasswordRepeat')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Terms text -->
+                    <p class="terms-text">
+                        By continuing, you agree to 
+                        <a href="#" class="terms-link">Terms of Use</a> 
+                        and 
+                        <a href="#" class="terms-link">Privacy Policy</a>
+                    </p>
+
+                    <!-- Register button -->
+                    <button type="submit" class="btn-primary btn-full">Зарегистрироваться</button>
+
+                    <!-- Sign in link -->
+                    <p class="auth-link-text">
+                        Уже есть аккаунт? 
+                        <a href="login.html" class="auth-link">Войти</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
