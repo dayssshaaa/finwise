@@ -1,0 +1,238 @@
+/* Savings Specific Styles */
+
+.page-title-dark {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-gray);
+    text-align: center;
+    margin: 0;
+}
+
+.notification-btn-dark {
+    color: var(--dark-gray);
+}
+
+/* Savings Categories Grid */
+.savings-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.savings-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A0D2F7;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.savings-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.savings-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.savings-name {
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+/* Savings Goal Overview */
+.savings-goal-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.goal-info {
+    flex: 1;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.goal-icon {
+    font-size: 32px;
+}
+
+.goal-content {
+    flex: 1;
+}
+
+.goal-label {
+    font-size: 14px;
+    color: var(--placeholder-green);
+    margin: 0 0 5px;
+}
+
+.goal-amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.goal-saved {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-teal);
+    margin: 0;
+}
+
+.circular-progress-savings {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.savings-goal-name {
+    font-size: 14px;
+    color: var(--primary-teal);
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+/* Progress Bar */
+.savings-progress-bar {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.progress-text-left {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    z-index: 2;
+}
+
+.progress-bar-savings {
+    background-color: var(--primary-teal);
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill-savings {
+    background-color: var(--primary-teal-dark);
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+.progress-target-amount {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.progress-status {
+    color: var(--dark-gray);
+    font-size: 14px;
+    margin: 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.progress-status .checkbox-icon {
+    margin-right: 8px;
+    color: var(--primary-teal);
+}
+
+/* Savings Transactions */
+.savings-transactions {
+    margin-bottom: 30px;
+}
+
+.month-header-savings {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-gray);
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+    .savings-categories-grid {
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .savings-goal-overview {
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+
+    .goal-amount,
+    .goal-saved {
+        font-size: 32px;
+    }
+
+    .circular-progress-savings {
+        width: 140px;
+        height: 140px;
+    }
+
+    .savings-goal-overview svg {
+        width: 140px;
+        height: 140px;
+    }
+
+    .savings-transactions {
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .savings-goal-overview {
+        gap: 40px;
+    }
+
+    .goal-amount,
+    .goal-saved {
+        font-size: 36px;
+    }
+
+    .circular-progress-savings {
+        width: 160px;
+        height: 160px;
+    }
+
+    .savings-goal-overview svg {
+        width: 160px;
+        height: 160px;
+    }
+}
+
